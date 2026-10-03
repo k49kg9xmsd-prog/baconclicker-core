@@ -1,0 +1,1 @@
+# baconclicker-core
