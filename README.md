@@ -31,26 +31,3 @@ ZIP 解壓後即可直接看到 `index.html`、`app.py` 等檔案。
 
 輸出的 IPA 必須重新簽名，例如使用 KSign。此工具不需要也不應收集 `.p12` 或憑證密碼。
 
-## 啟動
-
-需要 Python 3.10+：
-
-```bash
-python -m pip install -r requirements.txt
-python app.py
-```
-
-瀏覽器開啟：
-
-```text
-http://127.0.0.1:8000
-```
-
-> 注意：`index.html` 雖然已在根目錄，但 IPA 注入依然需要 `app.py` 後端。直接雙擊 `index.html` 只能看到介面，無法呼叫 `/api/inject` 完成注入。
-
-## Docker
-
-```bash
-docker build -t bacon-ipa-injector .
-docker run --rm -p 8000:8000 bacon-ipa-injector
-```
